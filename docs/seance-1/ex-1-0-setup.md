@@ -31,12 +31,13 @@
 ??? tip "Hint 2"
     Still blocked after 2 tries? Raise your hand.
 
-!!! info "3 shared credentials, given to you in class"
-    Slack, Google Sheets, and the LLM provider are **class-shared accounts** — I will post 3
-    expiring links in `#test-seance-1` (one per secret) right as you reach this part of the
-    exercise. Open each link, copy the value straight into your own local n8n, now. Do not
-    screenshot or save them anywhere else, and do not reuse them in your own projects — they
-    get shut off once the module ends.
+!!! info "3 credentials, given to you in class"
+    Slack and Google Sheets are **class-shared accounts** — one value for everyone. The LLM
+    key is **yours alone** (one per student, $1 cap each) — see CP4. I will post 3 expiring
+    links in `#test-seance-1` right as you reach each part of the exercise. Open each link,
+    copy the value straight into your own local n8n, now. Do not screenshot or save them
+    anywhere else, and do not reuse them in your own projects — they get shut off once the
+    module ends.
 
 ## CP2 — Your first workflow: a Slack message
 
@@ -82,14 +83,25 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 
 ## CP4 — Add your LLM credential
 
-1. Left menu → **Credentials** → **Create credential**.
-2. Pick the credential type matching the provider in the `#test-seance-1` link (e.g. **OpenRouter** or
-   **OpenAI**), paste the API key, **Save**.
-3. Left menu → **Credentials** again. You should now see three: a Slack credential, a Google
+The LLM key is different from the other two: it's **yours alone**, not shared with the
+class. The `#test-seance-1` link for this one is a list of keys, one per student, each
+capped at $1.
+
+1. Open the list, **take any row nobody else has claimed yet**, and say your row number out
+   loud so nobody else takes the same one. If two people grab the same row by accident,
+   whoever's key fails to save just takes the next unclaimed one — low stakes, it's a $1 cap.
+2. Left menu → **Credentials** → **Create credential** → **OpenRouter**.
+3. Paste your claimed API key, **Save**.
+4. Left menu → **Credentials** again. You should now see three: a Slack credential, a Google
    Sheets credential, and your LLM credential.
 
 ✅ **Done when**: all three are there. Do not edit or delete them — you need all three for
 the rest of the module. → CP4. Go to Ex 1.1.
+
+!!! note "Default model: `openai/gpt-4o-mini`"
+    Use this model for the exercises unless told otherwise — it's cheap and its tool-calling
+    works reliably with n8n's AI Agent node. You can try other models later once you
+    understand the trade-offs (Séance 2 covers this).
 
 ---
 
