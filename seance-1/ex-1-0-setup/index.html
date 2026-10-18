@@ -1093,11 +1093,11 @@ anything yet.</p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">3 shared credentials, given to you in class</p>
-<p>Slack, Google Sheets, and the LLM provider are <strong>class-shared accounts</strong> — I will show
-the 3 values (a Slack token, a Google credential, an API key) on screen during this
-exercise. Copy them once, into your own local n8n, now. Do not screenshot or save them
-anywhere else, and do not reuse them in your own projects — they get shut off once the
-module ends.</p>
+<p>Slack, Google Sheets, and the LLM provider are <strong>class-shared accounts</strong> — I will post 3
+expiring links in <code>#test-seance-1</code> (one per secret) right as you reach this part of the
+exercise. Open each link, copy the value straight into your own local n8n, now. Do not
+screenshot or save them anywhere else, and do not reuse them in your own projects — they
+get shut off once the module ends.</p>
 </div>
 <h2 id="cp2-your-first-workflow-a-slack-message">CP2 — Your first workflow: a Slack message</h2>
 <p>We build the smallest possible workflow: <strong>2 nodes</strong>, started by hand.</p>
@@ -1105,7 +1105,7 @@ module ends.</p>
 <li>Click <strong>+ Add first step</strong> → search <code>Manual Trigger</code> → add it.</li>
 <li>Click the <strong>+</strong> on the right of the trigger → search <code>Slack</code> → choose <strong>Send a message</strong>.</li>
 <li>In the Slack node: <strong>Credential</strong> field → <strong>Create new credential</strong>. Choose <strong>Slack API</strong>,
-   paste the <strong>Bot token</strong> shown on screen, <strong>Save</strong>.</li>
+   paste the <strong>Bot token</strong> from the link in <code>#test-seance-1</code>, <strong>Save</strong>.</li>
 <li><strong>Channel</strong>: <code>#test-seance-1</code> · <strong>Message</strong>: anything you want. Everyone can read it.</li>
 <li>Click <strong>Execute workflow</strong> at the bottom.</li>
 </ol>
@@ -1120,14 +1120,14 @@ wrong, or the bot was never invited to it — ask.</p>
 <details class="tip">
 <summary>Hint 2</summary>
 <p>"Invalid auth" on save? You likely copied the token with a trailing space, or copied the
-wrong one (it starts with <code>xoxb-</code>). Re-copy from the screen, paste again.</p>
+wrong one (it starts with <code>xoxb-</code>). Re-open the link, copy again.</p>
 </details>
 <h2 id="cp3-google-sheets-answers">CP3 — Google Sheets answers</h2>
 <ol>
 <li>New workflow (menu → <strong>New workflow</strong>).</li>
 <li>Add <code>Manual Trigger</code>, then a <code>Google Sheets</code> node → <strong>Get row(s) in sheet</strong>.</li>
 <li><strong>Credential</strong> field → <strong>Create new credential</strong>. Choose <strong>Google Sheets Service Account</strong>,
-   paste the service-account JSON key shown on screen, <strong>Save</strong>.</li>
+   paste the service-account JSON key from the link in <code>#test-seance-1</code>, <strong>Save</strong>.</li>
 <li><strong>Document</strong>: <code>FoodFleet — Shared Sandbox</code> · <strong>Sheet</strong>: <code>Sheet1</code>.</li>
 <li><strong>Execute workflow</strong>. The OUTPUT panel should show a few test rows.</li>
 </ol>
@@ -1142,7 +1142,7 @@ pasted the <strong>whole</strong> JSON key, including the outer <code>{ }</code>
 <h2 id="cp4-add-your-llm-credential">CP4 — Add your LLM credential</h2>
 <ol>
 <li>Left menu → <strong>Credentials</strong> → <strong>Create credential</strong>.</li>
-<li>Pick the credential type matching the provider shown on screen (e.g. <strong>OpenRouter</strong> or
+<li>Pick the credential type matching the provider in the <code>#test-seance-1</code> link (e.g. <strong>OpenRouter</strong> or
    <strong>OpenAI</strong>), paste the API key, <strong>Save</strong>.</li>
 <li>Left menu → <strong>Credentials</strong> again. You should now see three: a Slack credential, a Google
    Sheets credential, and your LLM credential.</li>
