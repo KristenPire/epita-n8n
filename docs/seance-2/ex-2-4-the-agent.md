@@ -95,6 +95,6 @@ That sentence is the real deliverable of this exercise. Not the workflow.
     "I used an agent because it was in the brief" is not.
 
 !!! note "Budget"
-    Same `Workshop LLM` credential, same $2 cap. An agent makes **several** calls per run.
+    Same `Workshop LLM` credential, same $1 cap. An agent makes **several** calls per run.
     Do not wire it to a fast Schedule Trigger while you experiment. After the module you can
     use your own keys.

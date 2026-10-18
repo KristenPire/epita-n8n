@@ -59,7 +59,9 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 1. Click **+ Add first step** → search `Manual Trigger` → add it.
 2. Click the **+** on the right of the trigger → search `Slack` → choose **Send a message**.
 3. In the Slack node: **Credential** field → **Create new credential**. Choose **Slack API**,
-   paste the **Bot token** from the class credentials link above (`SLACK_BOT_TOKEN`), **Save**.
+   paste the **Bot token** from the class credentials link above (`SLACK_BOT_TOKEN`). At the
+   top, rename the credential to exactly **`Workshop Slack`** — every later exercise and
+   skeleton you import expects that exact name. **Save**.
 4. **Channel**: `#test-seance-1` · **Message**: anything you want. Everyone can read it.
 5. Click **Execute workflow** at the bottom.
 
@@ -83,7 +85,8 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 3. **Credential** field → **Create new credential**. Choose **Google Sheets Service Account**,
    paste the service-account email (`GOOGLE_SA_EMAIL`) and private key (`GOOGLE_SA_PRIVATE_KEY`)
    — or the full JSON if your node only has one field — from the same class credentials
-   link, **Save**.
+   link. Rename the credential to exactly **`Workshop Google`** — same reason as Slack.
+   **Save**.
 4. **Document**: `FoodFleet — Shared Sandbox` · **Sheet**: `Sheet1`.
 5. **Execute workflow**. The OUTPUT panel should show a few test rows.
 
@@ -107,9 +110,10 @@ class. Instead of one link for everyone, there are **23 separate links posted in
    accident, whoever's key fails to save just picks another unclaimed link — low stakes,
    it's a $1 cap.
 2. Left menu → **Credentials** → **Create credential** → **OpenRouter**.
-3. Paste your claimed API key, **Save**.
-4. Left menu → **Credentials** again. You should now see three: a Slack credential, a Google
-   Sheets credential, and your LLM credential.
+3. Paste your claimed API key. Rename the credential to exactly **`Workshop LLM`** — same
+   reason as the other two. **Save**.
+4. Left menu → **Credentials** again. You should now see three: `Workshop Slack`,
+   `Workshop Google`, `Workshop LLM`.
 
 ✅ **Done when**: all three are there. Do not edit or delete them — you need all three for
 the rest of the module. → CP4. Go to Ex 1.1.

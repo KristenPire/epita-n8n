@@ -31,7 +31,7 @@ somewhere useful.
 ✅ **Done when**: the AI answers. That was your first LLM call from a workflow. → CP1.
 
 !!! warning "💸 Budget"
-    Each call costs a fraction of a cent. Your budget for the module is $2. You cannot
+    Each call costs a fraction of a cent. Your budget for the module is $1. You cannot
     break anything — unless you set a trigger every 10 seconds. Do not set a trigger every
     10 seconds.
 
