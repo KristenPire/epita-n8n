@@ -24,11 +24,22 @@ somewhere useful.
 
 ## CP1 — The AI answers you (dry run)
 
-1. At the end of your 2.1 workflow, add a **Basic LLM Chain** node (search "LLM"). Model:
-   select the **`Workshop LLM`** credential.
-2. Hardcoded test prompt: `Reply only: OK`. Execute.
+1. At the end of your 2.1 workflow, add a **Basic LLM Chain** node (search "LLM"). It arrives
+   with an empty **Chat Model** slot underneath — click it, search `OpenRouter`, add an
+   **OpenRouter Chat Model** node.
+2. In that node: **Credential** → `Workshop LLM`. This is *not* the model — the key just
+   gives you access and a $1 budget, you still have to pick what to call.
+3. **Model** field (same node, just below Credential) → click it, type `gpt-4o-mini` in the
+   search, select **`openai/gpt-4o-mini`**. Use this one for every exercise today unless
+   told otherwise — see [why](../seance-1/ex-1-0-setup.md#cp4-add-your-llm-credential).
+4. Back on the Basic LLM Chain node: hardcoded test prompt `Reply only: OK`. Execute.
 
 ✅ **Done when**: the AI answers. That was your first LLM call from a workflow. → CP1.
+
+??? tip "Hint — model search shows nothing, or the wrong thing"
+    The list is OpenRouter's full catalog, hundreds of entries — type the exact slug
+    (`gpt-4o-mini`) rather than a vague word. If the field is simply empty with no search
+    box, the Credential above isn't saved yet — go back and check CP4 of the Setup Sprint.
 
 !!! warning "💸 Budget"
     Each call costs a fraction of a cent. Your budget for the module is $1. You cannot
