@@ -49,63 +49,26 @@ self-hosted — your data stays on your computer, not on someone else's server.
 
 ## CP1 — Start n8n
 
-You have two ways to start n8n. Pick one. **Compose is the one you keep using all module**,
-because it remembers your data when you stop and restart n8n.
+Follow the **official n8n Docker Compose guide**:
+[docs.n8n.io/hosting/installation/docker](https://docs.n8n.io/hosting/installation/docker/#docker-compose)
+— it stays accurate as n8n changes, so we link to it instead of copying commands here. Use
+the **Docker Compose** steps on that page (not plain `docker run`): Compose remembers your
+data when you stop and restart n8n, and you'll be doing that all module.
 
-### Option A — Docker Compose (recommended)
+Once you're through it:
 
-1. Create a new folder for the course, and go into it:
-   ```bash
-   mkdir epita-n8n && cd epita-n8n
-   ```
-2. Create a file named `docker-compose.yml` with this content:
-   ```yaml
-   services:
-     n8n:
-       image: docker.n8n.io/n8nio/n8n
-       restart: unless-stopped
-       ports:
-         - "5678:5678"
-       environment:
-         - GENERIC_TIMEZONE=Europe/Paris
-         - TZ=Europe/Paris
-         - N8N_SECURE_COOKIE=false
-       volumes:
-         - n8n_data:/home/node/.n8n
-
-   volumes:
-     n8n_data:
-   ```
-3. Start it:
-   ```bash
-   docker compose up -d
-   ```
-4. Check it is running:
+1. Check the container is running:
    ```bash
    docker compose ps
    ```
    You should see one container, `STATUS` = `Up`.
 
-### Option B — a single `docker run` command (quick, but data lives only in that container)
-
-```bash
-docker run -it --rm --name n8n -p 5678:5678 \
-  -e GENERIC_TIMEZONE=Europe/Paris -e TZ=Europe/Paris \
-  -v n8n_data:/home/node/.n8n \
-  docker.n8n.io/n8nio/n8n
-```
-
-This keeps your terminal attached to n8n's logs. Closing the terminal (or `Ctrl+C`) stops
-n8n. Use `docker compose` (Option A) once you move past today — it runs in the background
-and survives a laptop restart if you `docker compose up -d` again.
-
-✅ **Done when**: `docker compose ps` (or your terminal, for Option B) shows the container
-running. → CP1.
+✅ **Done when**: `docker compose ps` shows the container running. → CP1.
 
 ??? tip "Hint — port 5678 already in use"
     Something else on your laptop is already using that port. Either stop it, or change the
-    port mapping to e.g. `"5679:5678"` in the file (or `-p 5679:5678` for `docker run`), then
-    open `localhost:5679` instead in CP2.
+    port mapping in your `docker-compose.yml` (e.g. `"5679:5678"`), restart with
+    `docker compose up -d`, then open `localhost:5679` instead in CP2.
 
 ??? tip "Hint — first start is slow"
     The first run downloads the n8n image (a few hundred MB). This can take a minute or two
