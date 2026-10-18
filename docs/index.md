@@ -26,8 +26,7 @@ Your grade comes from **the project + the soutenance**. Two things are graded:
 1. **How it works** — you can explain every step of your own workflow.
 2. **Why it is relevant** — you can justify the use case and your design choices.
 
-Details: [Soutenance guide](seance-4/soutenance.md). The project rules are in the
-[Project brief](seance-3/project-brief.md).
+Details on the project brief and the soutenance guide arrive in Séance 3 and 4.
 
 ## Your tools
 
@@ -36,7 +35,7 @@ Details: [Soutenance guide](seance-4/soutenance.md). The project rules are in th
 | **Your n8n instance** | URL + login given in Séance 1. It is YOUR space. Nobody else works in it. |
 | **This site** | All exercise instructions. Keep it open next to n8n. |
 | **The survival card** | Vocabulary + the 5 useful formulas. [Open it here](survival-card.md). |
-| **Slack** | Ask questions in `#help`. Your workflows will also send messages there. |
+| **Slack** | Ask questions in `#test-seance-1`. Your workflows will also send messages there. |
 
 ## 🚚 FoodFleet — the demo company
 
