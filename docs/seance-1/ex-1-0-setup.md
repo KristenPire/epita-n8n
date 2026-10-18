@@ -32,11 +32,11 @@
     Still blocked after 2 tries? Raise your hand.
 
 !!! info "3 shared credentials, given to you in class"
-    Slack, Google Sheets, and the LLM provider are **class-shared accounts** — I will show
-    the 3 values (a Slack token, a Google credential, an API key) on screen during this
-    exercise. Copy them once, into your own local n8n, now. Do not screenshot or save them
-    anywhere else, and do not reuse them in your own projects — they get shut off once the
-    module ends.
+    Slack, Google Sheets, and the LLM provider are **class-shared accounts** — I will post 3
+    expiring links in `#test-seance-1` (one per secret) right as you reach this part of the
+    exercise. Open each link, copy the value straight into your own local n8n, now. Do not
+    screenshot or save them anywhere else, and do not reuse them in your own projects — they
+    get shut off once the module ends.
 
 ## CP2 — Your first workflow: a Slack message
 
@@ -45,7 +45,7 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 1. Click **+ Add first step** → search `Manual Trigger` → add it.
 2. Click the **+** on the right of the trigger → search `Slack` → choose **Send a message**.
 3. In the Slack node: **Credential** field → **Create new credential**. Choose **Slack API**,
-   paste the **Bot token** shown on screen, **Save**.
+   paste the **Bot token** from the link in `#test-seance-1`, **Save**.
 4. **Channel**: `#test-seance-1` · **Message**: anything you want. Everyone can read it.
 5. Click **Execute workflow** at the bottom.
 
@@ -60,14 +60,14 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 
 ??? tip "Hint 2"
     "Invalid auth" on save? You likely copied the token with a trailing space, or copied the
-    wrong one (it starts with `xoxb-`). Re-copy from the screen, paste again.
+    wrong one (it starts with `xoxb-`). Re-open the link, copy again.
 
 ## CP3 — Google Sheets answers
 
 1. New workflow (menu → **New workflow**).
 2. Add `Manual Trigger`, then a `Google Sheets` node → **Get row(s) in sheet**.
 3. **Credential** field → **Create new credential**. Choose **Google Sheets Service Account**,
-   paste the service-account JSON key shown on screen, **Save**.
+   paste the service-account JSON key from the link in `#test-seance-1`, **Save**.
 4. **Document**: `FoodFleet — Shared Sandbox` · **Sheet**: `Sheet1`.
 5. **Execute workflow**. The OUTPUT panel should show a few test rows.
 
@@ -83,7 +83,7 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 ## CP4 — Add your LLM credential
 
 1. Left menu → **Credentials** → **Create credential**.
-2. Pick the credential type matching the provider shown on screen (e.g. **OpenRouter** or
+2. Pick the credential type matching the provider in the `#test-seance-1` link (e.g. **OpenRouter** or
    **OpenAI**), paste the API key, **Save**.
 3. Left menu → **Credentials** again. You should now see three: a Slack credential, a Google
    Sheets credential, and your LLM credential.
