@@ -1140,7 +1140,9 @@ once the module ends.</p>
 <li>Click <strong>+ Add first step</strong> → search <code>Manual Trigger</code> → add it.</li>
 <li>Click the <strong>+</strong> on the right of the trigger → search <code>Slack</code> → choose <strong>Send a message</strong>.</li>
 <li>In the Slack node: <strong>Credential</strong> field → <strong>Create new credential</strong>. Choose <strong>Slack API</strong>,
-   paste the <strong>Bot token</strong> from the class credentials link above (<code>SLACK_BOT_TOKEN</code>), <strong>Save</strong>.</li>
+   paste the <strong>Bot token</strong> from the class credentials link above (<code>SLACK_BOT_TOKEN</code>). At the
+   top, rename the credential to exactly <strong><code>Workshop Slack</code></strong> — every later exercise and
+   skeleton you import expects that exact name. <strong>Save</strong>.</li>
 <li><strong>Channel</strong>: <code>#test-seance-1</code> · <strong>Message</strong>: anything you want. Everyone can read it.</li>
 <li>Click <strong>Execute workflow</strong> at the bottom.</li>
 </ol>
@@ -1164,7 +1166,8 @@ wrong one (it starts with <code>xoxb-</code>). Re-open the class credentials lin
 <li><strong>Credential</strong> field → <strong>Create new credential</strong>. Choose <strong>Google Sheets Service Account</strong>,
    paste the service-account email (<code>GOOGLE_SA_EMAIL</code>) and private key (<code>GOOGLE_SA_PRIVATE_KEY</code>)
    — or the full JSON if your node only has one field — from the same class credentials
-   link, <strong>Save</strong>.</li>
+   link. Rename the credential to exactly <strong><code>Workshop Google</code></strong> — same reason as Slack.
+   <strong>Save</strong>.</li>
 <li><strong>Document</strong>: <code>FoodFleet — Shared Sandbox</code> · <strong>Sheet</strong>: <code>Sheet1</code>.</li>
 <li><strong>Execute workflow</strong>. The OUTPUT panel should show a few test rows.</li>
 </ol>
@@ -1186,9 +1189,10 @@ class. Instead of one link for everyone, there are <strong>23 separate links pos
    accident, whoever's key fails to save just picks another unclaimed link — low stakes,
    it's a $1 cap.</li>
 <li>Left menu → <strong>Credentials</strong> → <strong>Create credential</strong> → <strong>OpenRouter</strong>.</li>
-<li>Paste your claimed API key, <strong>Save</strong>.</li>
-<li>Left menu → <strong>Credentials</strong> again. You should now see three: a Slack credential, a Google
-   Sheets credential, and your LLM credential.</li>
+<li>Paste your claimed API key. Rename the credential to exactly <strong><code>Workshop LLM</code></strong> — same
+   reason as the other two. <strong>Save</strong>.</li>
+<li>Left menu → <strong>Credentials</strong> again. You should now see three: <code>Workshop Slack</code>,
+   <code>Workshop Google</code>, <code>Workshop LLM</code>.</li>
 </ol>
 <p>✅ <strong>Done when</strong>: all three are there. Do not edit or delete them — you need all three for
 the rest of the module. → CP4. Go to Ex 1.1.</p>
