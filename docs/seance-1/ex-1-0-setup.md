@@ -42,10 +42,11 @@
     Still blocked after 2 tries? Raise your hand.
 
 !!! info "3 credentials, given to you in class"
-    Slack and Google Sheets are **class-shared accounts** — one value for everyone. The LLM
-    key is **yours alone** (one per student, $1 cap each) — see CP4. I will post 3 expiring
-    links in `#test-seance-1` right as you reach each part of the exercise. Open each link,
-    copy the value straight into your own local n8n, now. Do not screenshot or save them
+    Slack and Google Sheets are **class-shared accounts** — one value for everyone, posted
+    as 2 expiring links in `#test-seance-1`. The LLM key is **yours alone** (one per
+    student, $1 cap each) — 23 separate expiring links, also in `#test-seance-1`, see CP4.
+    Open the link(s) right as you reach each part of the exercise, copy the value straight
+    into your own local n8n, now. Do not screenshot or save them
     anywhere else, and do not reuse them in your own projects — they get shut off once the
     module ends.
 
@@ -94,12 +95,13 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 ## CP4 — Add your LLM credential
 
 The LLM key is different from the other two: it's **yours alone**, not shared with the
-class. The `#test-seance-1` link for this one is a list of keys, one per student, each
-capped at $1.
+class. Instead of one link for everyone, there are **23 separate links posted in
+`#test-seance-1`**, each opening to one individual API key, capped at $1.
 
-1. Open the list, **take any row nobody else has claimed yet**, and say your row number out
-   loud so nobody else takes the same one. If two people grab the same row by accident,
-   whoever's key fails to save just takes the next unclaimed one — low stakes, it's a $1 cap.
+1. Open the list of 23 links, **click any one nobody else has claimed yet**, and say its
+   number out loud so nobody else opens the same one. If two people open the same link by
+   accident, whoever's key fails to save just picks another unclaimed link — low stakes,
+   it's a $1 cap.
 2. Left menu → **Credentials** → **Create credential** → **OpenRouter**.
 3. Paste your claimed API key, **Save**.
 4. Left menu → **Credentials** again. You should now see three: a Slack credential, a Google
