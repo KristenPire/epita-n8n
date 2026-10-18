@@ -53,8 +53,8 @@ in this one link:
 
 **The password is given out loud in class**, not written anywhere.
 
-**The LLM key is yours alone** — one per student, $1 cap each, **23 separate links** posted
-in `#test-seance-1`. See CP4 for how to claim one.
+**The LLM key is yours alone** — one per student, $1 cap each, **sent to you personally as
+a Slack DM**, not posted in a channel. See CP4.
 
 Open the link(s) right as you reach each part of the exercise below, copy the value
 straight into your own local n8n, now. Do not screenshot or save them anywhere else, and do
@@ -110,13 +110,10 @@ We build the smallest possible workflow: **2 nodes**, started by hand.
 ## CP4 — Add your LLM credential
 
 The LLM key is different from the other two: it's **yours alone**, not shared with the
-class. Instead of one link for everyone, there are **23 separate links posted in
-`#test-seance-1`**, each opening to one individual API key, capped at $1.
+class. Instead of one link for everyone, you get **a Slack DM, sent to you personally**,
+with one individual API key capped at $1.
 
-1. Open the list of 23 links, **click any one nobody else has claimed yet**, and say its
-   number out loud so nobody else opens the same one. If two people open the same link by
-   accident, whoever's key fails to save just picks another unclaimed link — low stakes,
-   it's a $1 cap.
+1. Check your Slack DMs for the link. Open it, copy the key.
 2. Left menu → **Credentials** → **Create credential** → **OpenRouter**.
 3. Paste your claimed API key. Rename the credential to exactly **`Workshop LLM`** — same
    reason as the other two. **Save**.
