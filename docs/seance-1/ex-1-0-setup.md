@@ -10,6 +10,16 @@
 
 ---
 
+## CP0 — Join the class Slack workspace
+
+1. Open the invite link:
+   [join.slack.com/t/epita-n8n/shared_invite/zt-4djjazkr6-8qzp2OhhZo2r3ExTH7mOCA](https://join.slack.com/t/epita-n8n/shared_invite/zt-4djjazkr6-8qzp2OhhZo2r3ExTH7mOCA)
+2. Create your account (any name is fine), join the `Epita-n8n` workspace.
+3. Go to the `#test-seance-1` channel — that's where the credential links for CP2–CP4 below
+   get posted, and where your bot messages land.
+
+✅ **Done when**: you can see `#test-seance-1` in your sidebar. → CP0.
+
 ## CP1 — Logged into your instance
 
 1. Open `http://localhost:5678` — the n8n you started in
