@@ -14,13 +14,20 @@ when you need a human in the loop.
 
 ## The setup
 
-In the shared Drive: the sheet **`2.3 — Dirty data`**. Three "leads" in it are deliberately
-bad:
+In the `FoodFleet — Shared Sandbox` document, tab **`2.3 — Dirty Data`** (columns `lead`,
+`name`, `budget`, `content` — read it with a Google Sheets node, same credential as always).
+Three "leads" in it are deliberately bad:
 
 1. **The ambiguous one** — contradictory information (big budget, but the message says "just
    looking").
 2. **The empty one** — half the fields are missing.
-3. **The hostile one** — the text contains a hidden instruction aimed at the AI 😈
+3. **The hostile one** — the `content` field contains a hidden instruction aimed at the AI 😈
+
+!!! warning "Read-only for this exercise"
+    This tab is shared by the whole class. **Do not write your answers back into it** — 23
+    people editing the same tab at once will corrupt each other's data. Fill the grid below
+    in your own notes (a Google Doc, a text file, whatever you already use), not in this
+    sheet.
 
 You test **3 prompts** against them:
 
@@ -36,7 +43,7 @@ You test **3 prompts** against them:
 
 ## CP1 — The 3×3 grid
 
-Run each prompt against each lead (9 runs). Fill the grid (tab 2 of the sheet):
+Run each prompt against each lead (9 runs). Copy this grid into your own notes and fill it:
 
 | | P1 naive | P2 precise | P3 hardened |
 |---|---|---|---|

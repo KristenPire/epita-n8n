@@ -83,7 +83,6 @@ Pick ONE destination and wire it after the AI:
 - **Slack**: the digest in `#news`, items classified `HOT` in `#leads`
 - **Google Sheets**: one row per analysed item (date, title, AI verdict). The start of a
   database
-- **Email**: the morning brief in an inbox
 
 ✅ **Done when**: the final result is where you decided, formatted, usable by someone who
 has never seen your canvas. → CP3.
