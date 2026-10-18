@@ -421,34 +421,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="CP1 — Start n8n">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-a-docker-compose-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option A — Docker Compose (recommended)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-b-a-single-docker-run-command-quick-but-data-lives-only-in-that-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option B — a single docker run command (quick, but data lives only in that container)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1048,34 +1020,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="CP1 — Start n8n">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-a-docker-compose-recommended" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option A — Docker Compose (recommended)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#option-b-a-single-docker-run-command-quick-but-data-lives-only-in-that-container" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option B — a single docker run command (quick, but data lives only in that container)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1162,54 +1106,24 @@ Open the Docker Desktop app, wait for it to say "Docker Desktop is running", the
 try again.</p>
 </details>
 <h2 id="cp1-start-n8n">CP1 — Start n8n</h2>
-<p>You have two ways to start n8n. Pick one. <strong>Compose is the one you keep using all module</strong>,
-because it remembers your data when you stop and restart n8n.</p>
-<h3 id="option-a-docker-compose-recommended">Option A — Docker Compose (recommended)</h3>
+<p>Follow the <strong>official n8n Docker Compose guide</strong>:
+<a href="https://docs.n8n.io/hosting/installation/docker/#docker-compose">docs.n8n.io/hosting/installation/docker</a>
+— it stays accurate as n8n changes, so we link to it instead of copying commands here. Use
+the <strong>Docker Compose</strong> steps on that page (not plain <code>docker run</code>): Compose remembers your
+data when you stop and restart n8n, and you'll be doing that all module.</p>
+<p>Once you're through it:</p>
 <ol>
-<li>Create a new folder for the course, and go into it:
-   <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>epita-n8n<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>epita-n8n
-</code></pre></div></li>
-<li>Create a file named <code>docker-compose.yml</code> with this content:
-   <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">n8n</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker.n8n.io/n8nio/n8n</span>
-<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"5678:5678"</span>
-<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GENERIC_TIMEZONE=Europe/Paris</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TZ=Europe/Paris</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">N8N_SECURE_COOKIE=false</span>
-<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">n8n_data:/home/node/.n8n</span>
-
-<span class="nt">volumes</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">n8n_data</span><span class="p">:</span>
-</code></pre></div></li>
-<li>Start it:
-   <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div></li>
-<li>Check it is running:
+<li>Check the container is running:
    <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>ps
 </code></pre></div>
    You should see one container, <code>STATUS</code> = <code>Up</code>.</li>
 </ol>
-<h3 id="option-b-a-single-docker-run-command-quick-but-data-lives-only-in-that-container">Option B — a single <code>docker run</code> command (quick, but data lives only in that container)</h3>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>n8n<span class="w"> </span>-p<span class="w"> </span><span class="m">5678</span>:5678<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-e<span class="w"> </span><span class="nv">GENERIC_TIMEZONE</span><span class="o">=</span>Europe/Paris<span class="w"> </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Paris<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-v<span class="w"> </span>n8n_data:/home/node/.n8n<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>docker.n8n.io/n8nio/n8n
-</code></pre></div>
-<p>This keeps your terminal attached to n8n's logs. Closing the terminal (or <code>Ctrl+C</code>) stops
-n8n. Use <code>docker compose</code> (Option A) once you move past today — it runs in the background
-and survives a laptop restart if you <code>docker compose up -d</code> again.</p>
-<p>✅ <strong>Done when</strong>: <code>docker compose ps</code> (or your terminal, for Option B) shows the container
-running. → CP1.</p>
+<p>✅ <strong>Done when</strong>: <code>docker compose ps</code> shows the container running. → CP1.</p>
 <details class="tip">
 <summary>Hint — port 5678 already in use</summary>
 <p>Something else on your laptop is already using that port. Either stop it, or change the
-port mapping to e.g. <code>"5679:5678"</code> in the file (or <code>-p 5679:5678</code> for <code>docker run</code>), then
-open <code>localhost:5679</code> instead in CP2.</p>
+port mapping in your <code>docker-compose.yml</code> (e.g. <code>"5679:5678"</code>), restart with
+<code>docker compose up -d</code>, then open <code>localhost:5679</code> instead in CP2.</p>
 </details>
 <details class="tip">
 <summary>Hint — first start is slow</summary>
