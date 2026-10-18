@@ -1,0 +1,169 @@
+{
+  "name": "Ex 1.4 — Les Deux Tableurs",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing",
+          "mode": "url",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1.4 — Inscriptions",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        192,
+        720
+      ],
+      "id": "d9d2e244-575b-4236-a5d8-40ac1456b5c2",
+      "name": "Lire A (inscriptions)",
+      "credentials": {
+        "googleApi": {
+          "name": "Workshop Google"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing",
+          "mode": "url",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1.4 — CRM",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        192,
+        1392
+      ],
+      "id": "b027401b-fc14-40d4-a179-702470a2176b",
+      "name": "Lire B (CRM)",
+      "credentials": {
+        "googleApi": {
+          "name": "Workshop Google"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing",
+          "mode": "url",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/17EMi0B4raflSrFdE3od-RWrIYUuyG_cRvK6osgG8T5o/edit?usp=sharing"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1.4 — CRM",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "company",
+              "displayName": "company",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        192,
+        1168
+      ],
+      "id": "3908845e-dc45-4b25-adb7-f2bc37ac4012",
+      "name": "Ajouter à B",
+      "credentials": {
+        "googleApi": {
+          "name": "Workshop Google"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        192,
+        944
+      ],
+      "id": "439917c6-eddc-4665-aec5-23761aa9c7c1",
+      "name": "Manual Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Lire A (inscriptions)": {
+      "main": [
+        []
+      ]
+    },
+    "Lire B (CRM)": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "id": "r8cziJD9cTwL8lKQ",
+  "tags": []
+}
