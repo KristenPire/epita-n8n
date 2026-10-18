@@ -23,7 +23,8 @@ subtle concept in n8n.
 **All the wiring is missing. That is your job**, starting with the Trigger to both reads
 (`Trigger` → `Read A` AND `Trigger` → `Read B`: one output going to two nodes).
 
-Your two test spreadsheets are in the shared Drive: `1.4 — Sign-ups` and `1.4 — CRM`.
+Your two test tabs are in the shared `FoodFleet — Shared Sandbox` document: `1.4 — Inscriptions`
+(the sign-ups) and `1.4 — CRM`. The skeleton's two read nodes already point at them.
 
 !!! tip "Why a Manual Trigger here, when 1.1 and 1.3 did not need one?"
     Here you wire **two different reads** into the same node (Compare Datasets). If you run
