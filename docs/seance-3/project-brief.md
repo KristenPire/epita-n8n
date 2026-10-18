@@ -61,6 +61,27 @@ a good grade, however nice the demo is.
 
 ---
 
+## Why every idea below looks too easy
+
+Read any row in the menus: trigger → agent → output, one sentence. That is **on purpose** —
+it is the skeleton, not the project. Built exactly as written, most of them are a 2-hour
+build, not a 2-week one. That gap is where your actual two weeks go. One worked example,
+using Family A's A1:
+
+| | 2-hour version (what the one-liner describes) | 2-week version (what you actually hand in) |
+|---|---|---|
+| **Trigger** | Manual, you run it when you remember | A real schedule, or a webhook on the form itself |
+| **Data** | Read the sheet once, send everything | **Diff against last run** — only enrich and alert on what's new or changed. Dead simple without this; this alone is most of week one |
+| **Agent** | One tool: look up the company | **Two or three tools**, and the agent decides which it needs per row — company info, a salary-range lookup, maybe a search for recent news on the company. The decision is the point, not the tools themselves |
+| **Failure case** | None — if the sheet has a blank row, it crashes or hallucinates | Handled on purpose: missing field → routed aside, not guessed. API down → retried once, then a clean skip, not a crash |
+| **Output** | A flat list in Slack | A digest that **groups and prioritises** — "3 need a follow-up today" before "12 no news yet" |
+
+Same idea. Same family. The difference is entirely in **state across runs**, **more than
+one tool for the agent to choose between**, and **a failure case you chose on purpose** —
+not a bigger idea. Apply this same stretch to whichever row you pick.
+
+---
+
 ## Family A — Your own daily-ops agent 🗂
 
 **Idea**: automate something that is really annoying in your own student life. The test of a
@@ -77,6 +98,11 @@ good Family A project is simple: **you will still be using it in March.**
 
 **Where the agent earns its place**: deciding *whether* something needs your attention. A
 fixed rule cannot tell "this email needs an answer today" from "this email is a newsletter".
+
+**Where the 2 weeks go**: every row above runs once in 2 hours. The project is making it
+track *change over time* (A3's "an unexpected increase" needs last week's number to compare
+against — that's state, not a single read) and survive real mess (half your emails won't
+fit your categories cleanly on day one).
 
 ---
 
@@ -99,6 +125,11 @@ diff, the test logs, or the issue history to answer this?" is exactly an agent d
 
 **Technical note**: the GitHub REST API is in the [API Menu](../seance-2/menu-api.md). Get a
 personal token: 60 requests per hour without one, 5000 with one.
+
+**Where the 2 weeks go**: a diff is not a PDF — real PRs blow past your prompt's context
+window, touch files you shouldn't summarise the same way (a lockfile vs. a logic change),
+and arrive with noisy commit history. Handling that, and giving the agent 2-3 tools instead
+of 1 (diff + test logs + issue history, not just diff), is the actual project.
 
 ---
 
@@ -124,6 +155,10 @@ how many documents it needs to read before it can answer.
 **Vector Store** nodes. A simple in-memory vector store is enough for C1 and C3 — you do not
 need to run a database. And keep the corpus small: 20 papers is a project, 2000 is a
 weekend lost to ingestion.
+
+**Where the 2 weeks go**: the first answer your agent gives will be wrong or vague — tuning
+retrieval (chunk size, how many chunks to pull, when to say "not enough information" instead
+of guessing) is most of the real work, and it is iteration, not a bigger pipeline.
 
 ---
 
