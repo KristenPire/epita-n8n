@@ -41,16 +41,24 @@
 ??? tip "Hint 2"
     Still blocked after 2 tries? Raise your hand.
 
-!!! info "3 credentials, given to you in class"
-    Slack and Google Sheets are **class-shared accounts** — one value for everyone, both
-    in this one link:
-    [privatebin.net/?e8981599c2dd4a14#AjwdJPyQQGFexj4FVNpFG2TjiNmNdTYFgkuBGx5dnmDd](https://privatebin.net/?e8981599c2dd4a14#AjwdJPyQQGFexj4FVNpFG2TjiNmNdTYFgkuBGx5dnmDd)
-    — **the password is given out loud in class**, not written anywhere. The LLM key is
-    **yours alone** (one per student, $1 cap each) — 23 separate links posted in
-    `#test-seance-1`, see CP4. Open the link(s) right as you reach each part of the
-    exercise, copy the value straight into your own local n8n, now. Do not screenshot or
-    save them anywhere else, and do not reuse them in your own projects — they get shut off
-    once the module ends.
+## Where your credentials come from
+
+Three credentials, given to you in class — not pre-installed, because every student runs
+their own local n8n with nothing shared by default.
+
+**Slack and Google Sheets** are **class-shared accounts** — one value for everyone, both
+in this one link:
+
+[privatebin.net/?e8981599c2dd4a14#AjwdJPyQQGFexj4FVNpFG2TjiNmNdTYFgkuBGx5dnmDd](https://privatebin.net/?e8981599c2dd4a14#AjwdJPyQQGFexj4FVNpFG2TjiNmNdTYFgkuBGx5dnmDd)
+
+**The password is given out loud in class**, not written anywhere.
+
+**The LLM key is yours alone** — one per student, $1 cap each, **23 separate links** posted
+in `#test-seance-1`. See CP4 for how to claim one.
+
+Open the link(s) right as you reach each part of the exercise below, copy the value
+straight into your own local n8n, now. Do not screenshot or save them anywhere else, and do
+not reuse them in your own projects — they get shut off once the module ends.
 
 ## CP2 — Your first workflow: a Slack message
 
