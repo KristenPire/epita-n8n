@@ -1,5 +1,5 @@
 {
-  "name": "Ex 1.4 — Les Deux Tableurs",
+  "name": "Ex 1.4 — The Two Spreadsheets",
   "nodes": [
     {
       "parameters": {
@@ -24,7 +24,7 @@
         720
       ],
       "id": "d9d2e244-575b-4236-a5d8-40ac1456b5c2",
-      "name": "Lire A (inscriptions)",
+      "name": "Read A (sign-ups)",
       "credentials": {
         "googleApi": {
           "name": "Workshop Google"
@@ -54,7 +54,7 @@
         1392
       ],
       "id": "b027401b-fc14-40d4-a179-702470a2176b",
-      "name": "Lire B (CRM)",
+      "name": "Read B (CRM)",
       "credentials": {
         "googleApi": {
           "name": "Workshop Google"
@@ -124,7 +124,7 @@
         1168
       ],
       "id": "3908845e-dc45-4b25-adb7-f2bc37ac4012",
-      "name": "Ajouter à B",
+      "name": "Add to B",
       "credentials": {
         "googleApi": {
           "name": "Workshop Google"
@@ -145,12 +145,12 @@
   ],
   "pinData": {},
   "connections": {
-    "Lire A (inscriptions)": {
+    "Read A (sign-ups)": {
       "main": [
         []
       ]
     },
-    "Lire B (CRM)": {
+    "Read B (CRM)": {
       "main": [
         []
       ]
