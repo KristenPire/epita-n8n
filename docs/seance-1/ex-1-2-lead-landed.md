@@ -70,7 +70,7 @@ In production this URL is wired to the FoodFleet web form. Today, you are the pr
 
 ## CP4 — Make it permanent
 
-1. Save. Switch the workflow to **Active**.
+1. Save, then hit **Publish** (top right — older n8n versions call this toggle **Active**).
 2. The webhook's **Production URL** now works all the time. Send it to a neighbour and ask
    them to send you a fake lead.
 

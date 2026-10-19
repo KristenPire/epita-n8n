@@ -69,7 +69,7 @@ The skeleton's Slack node arrives set to `#veille` — change it to `#news`, lik
 
 ## CP4 — Turn the radar on
 
-Schedule every 30 minutes → **Active**.
+Schedule every 30 minutes → **Publish**.
 
 ✅ **Done when**: it is green. Your radar runs. → CP4. 🎉
 

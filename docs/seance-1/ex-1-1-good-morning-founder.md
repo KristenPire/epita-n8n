@@ -90,9 +90,9 @@ at this stage.
 ## CP5 — Schedule it for 9:00 tomorrow
 
 1. Open **Schedule Trigger** → set: every day, **09:00**.
-2. Top right of the canvas: switch the workflow to **Active**.
+2. Top right of the canvas: hit **Publish** (older n8n versions call this toggle **Active**).
 
-✅ **Done when**: the toggle is green / "Active". Tomorrow at 9:00 the digest arrives alone.
+✅ **Done when**: the workflow shows **Published**. Tomorrow at 9:00 the digest arrives alone.
 → CP5. 🎉
 
 ---
