@@ -76,5 +76,5 @@ Write your answer to this question:
 type, a confidence threshold. → CP3.
 
 Keep this paragraph. You will reuse it almost word for word in your
-[Séance 4 soutenance](../seance-4/soutenance.md), when you are asked about the limits of
+the Séance 4 defense (page revealed later), when you are asked about the limits of
 your project.
