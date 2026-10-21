@@ -1,0 +1,348 @@
+{
+  "name": "Reference — Assistant Agent (tool wired)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "s9-assistant-agent",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1f6a2e3b-2f0a-4a1e-9c3d-6a2b4f1e7c01",
+      "name": "Webhook (⚠️ YOURS: form fields)",
+      "webhookId": "6c8e2a1d-4b3f-4e9a-8d2c-1a5f7b9e3c02"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Name: {{ $json.body.name }}\nClient message: {{ $json.body.message }}",
+        "options": {
+          "systemMessage": "You are the assistant that drafts the reply to an incoming client. ⚠️ YOURS: describe your exact mission here (e.g. check whether this is an existing client before drafting, adapt the tone to their history). Use the 'Find Client' tool to know whether this person already exists before answering. Write a short, personalised reply — it is never sent directly, it goes through human approval.",
+          "maxIterations": 3
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        224,
+        0
+      ],
+      "id": "2a7b3c4d-5e6f-4a1b-8c9d-0e1f2a3b4c05",
+      "name": "AI Agent (⚠️ YOURS: the mission)"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        144,
+        224
+      ],
+      "id": "3b8c4d5e-6f7a-4b2c-9d0e-1f2a3b4c5d06",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "b6yjf2G8B0vQhSiE",
+          "name": "Workshop LLM"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1wkoCRVPcDc8NPOgfDCjwJUyg2z68kSWtdZEahVOE3kw/edit?usp=sharing",
+          "mode": "url",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wkoCRVPcDc8NPOgfDCjwJUyg2z68kSWtdZEahVOE3kw/edit?usp=sharing"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "1.4 — CRM",
+          "mode": "name"
+        },
+        "descriptionType": "manual",
+        "toolDescription": "Checks whether this client already exists in our CRM, by name or email. Use it BEFORE drafting your reply. ⚠️ YOURS: point it at your own client sheet.",
+        "filtersUI": {
+          "values": []
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        304,
+        224
+      ],
+      "id": "4c9d5e6f-7a8b-4c3d-0e1f-2a3b4c5d6e07",
+      "name": "Find Client (⚠️ YOURS: source)",
+      "credentials": {
+        "googleApi": {
+          "id": "woG6HXEMUWERRgS8",
+          "name": "Workshop Google"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1wkoCRVPcDc8NPOgfDCjwJUyg2z68kSWtdZEahVOE3kw/edit?usp=sharing",
+          "mode": "url",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1wkoCRVPcDc8NPOgfDCjwJUyg2z68kSWtdZEahVOE3kw/edit?usp=sharing"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        },
+        "descriptionType": "manual",
+        "toolDescription": "Reads the product/offer context needed to answer well (FAQ, pitch). Read-only. ⚠️ YOURS: point it at your real knowledge base.",
+        "filtersUI": {
+          "values": []
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        304,
+        -160
+      ],
+      "id": "5d0e6f7a-8b9c-4d4e-1f2a-3b4c5d6e7f08",
+      "name": "Product Context (⚠️ YOURS: source)",
+      "credentials": {
+        "googleApi": {
+          "id": "woG6HXEMUWERRgS8",
+          "name": "Workshop Google"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendAndWait",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "leads"
+        },
+        "message": "=🤖 Draft (Agent) for {{ $('Webhook (⚠️ YOURS: form fields)').item.json.body.name }}:\n\n{{ $json.output }}\n\nApprove to send?",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.5,
+      "position": [
+        576,
+        0
+      ],
+      "id": "6e1f7a8b-9c0d-4e5f-2a3b-4c5d6e7f8a09",
+      "name": "Slack Approval (⚠️ YOURS: channel)",
+      "webhookId": "7f2a8b9c-0d1e-4f6a-3b4c-5d6e7f8a9b0a",
+      "credentials": {
+        "slackApi": {
+          "id": "PjoHv7OrrMjDcxJ0",
+          "name": "Workshop Slack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "8a3b9c0d-1e2f-4a7b-4c5d-6e7f8a9b0c0b",
+              "leftValue": "={{ $json.data.approved }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        800,
+        0
+      ],
+      "id": "9b4c0d1e-2f3a-4b8c-5d6e-7f8a9b0c1d0c",
+      "name": "Approved?"
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "leads"
+        },
+        "text": "=✅ Approved! Reply sent to {{ $('Webhook (⚠️ YOURS: form fields)').item.json.body.name }} (⚠️ YOURS: replace this message with a real email/SMS send)",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.5,
+      "position": [
+        960,
+        -16
+      ],
+      "id": "0c5d1e2f-3a4b-4c9d-6e7f-8a9b0c1d2e0d",
+      "name": "Send Reply (⚠️ YOURS: channel + real send)",
+      "webhookId": "1d6e2f3a-4b5c-4d0e-7f8a-9b0c1d2e3f0e",
+      "credentials": {
+        "slackApi": {
+          "id": "PjoHv7OrrMjDcxJ0",
+          "name": "Workshop Slack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "leads",
+          "mode": "name"
+        },
+        "text": "=❌ Draft (Agent) rejected for {{ $('Webhook (⚠️ YOURS: form fields)').item.json.body.name }} (nothing sent)",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.5,
+      "position": [
+        992,
+        112
+      ],
+      "id": "1d6e2f3a-4b5c-4e1f-8a9b-0c1d2e3f4a0f",
+      "name": "Notify Rejection (⚠️ YOURS: channel)",
+      "webhookId": "2e7f3a4b-5c6d-4e2f-8a9b-0c1d2e3f4a10",
+      "credentials": {
+        "slackApi": {
+          "id": "PjoHv7OrrMjDcxJ0",
+          "name": "Workshop Slack"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook (⚠️ YOURS: form fields)": {
+      "main": [
+        [
+          {
+            "node": "AI Agent (⚠️ YOURS: the mission)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent (⚠️ YOURS: the mission)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Client (⚠️ YOURS: source)": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent (⚠️ YOURS: the mission)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Product Context (⚠️ YOURS: source)": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent (⚠️ YOURS: the mission)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent (⚠️ YOURS: the mission)": {
+      "main": [
+        [
+          {
+            "node": "Slack Approval (⚠️ YOURS: channel)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Approval (⚠️ YOURS: channel)": {
+      "main": [
+        [
+          {
+            "node": "Approved?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Approved?": {
+      "main": [
+        [
+          {
+            "node": "Send Reply (⚠️ YOURS: channel + real send)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Notify Rejection (⚠️ YOURS: channel)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3f0e6a2b-8c9d-4e5f-af0b-1c2d3e4f5a0e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3e0f3aa4cf53a5935ef496e0aa6624475920f7617b4126653119612b32bbd065"
+  },
+  "nodeGroups": [],
+  "id": "s9AgentAssistant0001",
+  "tags": []
+}
