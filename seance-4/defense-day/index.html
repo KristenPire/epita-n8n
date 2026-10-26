@@ -1,0 +1,1431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="AI agents and workflow automation with n8n. 12 hours, 4 sessions, one personal project.">
+      
+      
+      
+      
+        <link rel="prev" href="../../seance-3/project-brief/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Defense Day - Automation with n8n — EPITA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#defense-day" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Automation with n8n — EPITA" class="md-header__button md-logo" aria-label="Automation with n8n — EPITA" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Automation with n8n — EPITA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Defense Day
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Automation with n8n — EPITA" class="md-nav__button md-logo" aria-label="Automation with n8n — EPITA" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Automation with n8n — EPITA
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../survival-card/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Survival Card
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séance 1 — Workflows
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Séance 1 — Workflows
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-0-docker-install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.0 — Install n8n (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-0-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.0b — Setup Sprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-1-good-morning-founder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 — Good Morning, Founder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-2-lead-landed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 — Lead Landed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-3-mention-radar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 — Mention Radar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-1/ex-1-4-two-spreadsheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 — The Two Spreadsheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séance 2 — AI Agents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Séance 2 — AI Agents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-2/menu-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The API Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-2/ex-2-1-two-sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 — Two Sources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-2/ex-2-2-the-analyst/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.2 — The Analyst
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-2/ex-2-3-garbage-in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.3 — Garbage In
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-2/ex-2-4-the-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.4 — The AI Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séance 3 — Your Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Séance 3 — Your Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../seance-3/project-brief/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Brief
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Séance 4 — Defense
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Séance 4 — Defense
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defense Day
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Defense Day
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-come-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to come with
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-5-beats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The 5 beats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-you-should-expect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions you should expect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-it-breaks-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If it breaks live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-it-is-not-your-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When it is not your turn
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After today
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-come-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to come with
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-5-beats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The 5 beats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questions-you-should-expect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questions you should expect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-it-breaks-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If it breaks live
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-it-is-not-your-turn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When it is not your turn
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After today
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="defense-day">Defense Day 🎤</h1>
+<p><strong>This is the exam.</strong> You present <strong>alone</strong>, your own project. Everyone in the room watches.</p>
+<p><strong>Format</strong>: 8 minutes of presentation + 4 minutes of questions. <strong>Hard cutoff at 8:00</strong> — a
+timer is projected, and it applies to everyone, because being kind to the first five
+students means the last one presents to an empty room.</p>
+<p>The two things graded are the two from the module brief: <strong>you explain how it works</strong>, and
+<strong>you justify why it is relevant</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">The one rule to apply before your slot</p>
+<p>If there is a node in your workflow you cannot explain, <strong>delete it. Before your
+slot.</strong> A simple workflow you fully understand scores higher than a big one you
+cannot explain. Using AI assistants to build was allowed — but if it's on your
+canvas, you own it.</p>
+</div>
+<hr />
+<h2 id="what-to-come-with">What to come with</h2>
+<p>Check every box <strong>the evening before</strong>, not in the room.</p>
+<ul>
+<li>☐ <strong>Your own laptop, charged</strong>, projector tested before your slot.</li>
+<li>☐ <strong>n8n open, your workflow open</strong>, logged in. Don't spend your 8 minutes finding a
+  password.</li>
+<li>☐ Your <strong>60-second screencast</strong> of a successful run — <strong>on the machine, not in the
+  cloud</strong>. Assume the WiFi fails.</li>
+<li>☐ The <strong>execution history</strong> open in a tab: a successful past execution is your proof
+  if the live run fails.</li>
+<li>☐ A note with your <strong>three main limits</strong>, written down. You will say them yourself.</li>
+<li>☐ A one-sentence answer to <strong>"would you actually use this next Monday?"</strong> — prepared
+  tonight, not improvised.</li>
+<li>☐ Your rough <strong>monthly cost</strong> number. Know whether it is cents or euros.</li>
+<li>☐ <strong>No slides required.</strong> The canvas and the real output are your slides. If you want
+  one slide, make it the problem and its number.</li>
+</ul>
+<hr />
+<h2 id="the-5-beats">The 5 beats</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Beat</th>
+<th>Time</th>
+<th>What you say</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>The problem</strong></td>
+<td>1 min</td>
+<td>What was annoying, how often, how long it took. One concrete number. Do not describe the solution yet.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Live demo</strong></td>
+<td>2 min</td>
+<td>Trigger it in front of us. Real data. We watch the execution and the real output arrive.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>How it works</strong></td>
+<td>2.5 min</td>
+<td>Walk the canvas. One sentence per step. Then stop on the <strong>agent</strong>: its mission, its tools, and show in the logs where it decided to call one.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Break it on purpose</strong></td>
+<td>1.5 min</td>
+<td>Trigger your failure case live. Show that it does not crash, or that it fails cleanly. This is the beat that separates a demo from a product.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Limits and next step</strong></td>
+<td>1 min</td>
+<td>What you would not trust it with yet, and the one thing you would build next.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Rehearse beat 2 and beat 4 with a timer</p>
+<p>Those are the two that can go wrong on stage. The other three you can talk through from
+memory. Rehearse the fragile 90 seconds, not the whole thing.</p>
+</div>
+<p><strong>How to narrate the canvas</strong> — one sentence per node, pointing at the screen:</p>
+<blockquote>
+<p>"The schedule starts it here, every morning at eight." · "This node pulls the new rows." ·
+"The agent gets the goal, and these two tools." · "It chose the second one — you can see
+it in the log, here." · "And the result lands here, in this message."</p>
+</blockquote>
+<p>Two mistakes to avoid: reading every parameter of every node (nobody follows), and <em>"then
+some stuff handles the data"</em> (that sentence tells us you don't know — expect a question
+about exactly that node).</p>
+<hr />
+<h2 id="the-rubric">The rubric</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+<th>What a good answer looks like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>It works</strong></td>
+<td>25%</td>
+<td>It runs live, on its real trigger, with real data. A recovered crash is fine. A workflow that only runs in test mode is not.</td>
+</tr>
+<tr>
+<td><strong>Functional understanding</strong></td>
+<td>25%</td>
+<td>You explain every node without reading. You can answer "what happens if this node returns nothing?"</td>
+</tr>
+<tr>
+<td><strong>The agent is real and justified</strong></td>
+<td>20%</td>
+<td>An AI Agent node with a tool, visible in the logs, and a sentence on why a fixed chain was not enough.</td>
+</tr>
+<tr>
+<td><strong>Relevance of the use case</strong></td>
+<td>15%</td>
+<td>A real problem with a real cost. Not a demo looking for a problem.</td>
+</tr>
+<tr>
+<td><strong>Robustness</strong></td>
+<td>10%</td>
+<td>The failure case is handled on purpose and shown live. Re-runnable without duplicates.</td>
+</tr>
+<tr>
+<td><strong>Clarity</strong></td>
+<td>5%</td>
+<td>8 minutes respected. Named nodes. The room follows.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">What is NOT graded</p>
+<p>Slide design. Number of nodes. How sophisticated the AI part is. A simple workflow that
+really runs and that you understand completely scores higher than a complicated one you
+cannot explain.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">The three requirements from Séance 3 are checked</p>
+<p>A real AI Agent node with a tool · one failure case handled · your own external
+account. If one is missing, <strong>say so yourself at the start</strong>. Do not let it be
+discovered in the questions.</p>
+</div>
+<hr />
+<h2 id="questions-you-should-expect">Questions you should expect</h2>
+<p>Prepare an answer for each of these. They will be asked.</p>
+<ul>
+<li><strong>"Why an agent and not a simple rule or a fixed LLM chain?"</strong> — the most common question.
+  If the honest answer is "a rule would have been enough", say so. Recognising it scores
+  better than defending a bad choice. ("Honestly, a chain was enough — the module required
+  an agent, so I placed it where it adds the most" is a <em>good</em> answer.)</li>
+<li><strong>"Show me the execution log where the agent made its decision."</strong></li>
+<li><strong>"What happens if this API is down tomorrow?"</strong></li>
+<li><strong>"What happens if you run it twice?"</strong></li>
+<li><strong>"Where is this field coming from?"</strong> — pointing at a random node on your canvas.</li>
+<li><strong>"What does it cost per run? Per month?"</strong> — a rough number is fine.</li>
+<li><strong>"Would you let it act without you checking?"</strong> — your Ex 2.3 paragraph answers this.
+  Reuse it.</li>
+<li><strong>"Would you actually use this next Monday?"</strong> — "Yes, because…" is great. "No, honestly,
+  because X is missing" is also fine. Hesitating is the only wrong answer.</li>
+<li><strong>"What broke the most while you were building it?"</strong> — an honest answer here is worth
+  more than a polished one.</li>
+</ul>
+<p><strong>On limits, honesty scores:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Says nothing</th>
+<th>Says engineer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"It works"</td>
+<td>"It works <strong>for English only</strong>"</td>
+</tr>
+<tr>
+<td><em>(silence about cost)</em></td>
+<td>"<strong>€4/month</strong> at this rate"</td>
+</tr>
+<tr>
+<td>"No problems"</td>
+<td>"Two runs the same day would duplicate rows — I did not fix that"</td>
+</tr>
+</tbody>
+</table>
+<p>You cannot hide a weakness — it will surface in the questions. But you can show you already
+know it. That is the difference between an accident and a decision.</p>
+<hr />
+<h2 id="if-it-breaks-live">If it breaks live</h2>
+<p>Breathe. It happens every year. Neither option below is a failure.</p>
+<ol>
+<li><strong>Debug out loud for 30 seconds.</strong> Say what you expected, open the output panel, read
+   the real data (reflex #1 from Séance 1). This is often the best moment of a defense:
+   we see you work.</li>
+<li><strong>Play your 60-second screencast</strong> and keep narrating over it. Then move on — do not
+   apologise for two minutes.</li>
+</ol>
+<p>What loses points is pretending nothing happened, or going silent. You built this. You know
+it better than anyone in the room.</p>
+<hr />
+<h2 id="when-it-is-not-your-turn">When it is not your turn</h2>
+<p>You are the audience. You will see ~20 different solutions to 20 different problems in one
+afternoon — some better than yours. <strong>Take notes.</strong> That is the best part of the day.</p>
+<hr />
+<h2 id="after-today">After today</h2>
+<ol>
+<li><strong>Your instance stays yours.</strong> Keep it running if the workflow is useful.</li>
+<li><strong>Security hygiene</strong>: delete or rotate the API keys you will not use again. A forgotten
+   key in an abandoned project is a real risk.</li>
+<li><strong>Keep one workflow alive</strong> — the one you will really use. Automation is only worth
+   something when it runs while you are not looking.</li>
+<li><strong>This is a real CV project.</strong> Be able to explain it in two minutes, without slides, in
+   a job interview.</li>
+</ol>
+<div class="admonition success">
+<p class="admonition-title">The point of all this</p>
+<p>At the end you have one automation that runs on your own accounts, that you understand
+completely, and that will still be running next month. That is worth more than the
+grade.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../seance-3/project-brief/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Project Brief">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Project Brief
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.sections", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
