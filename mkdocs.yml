@@ -45,6 +45,9 @@ nav:
       - "2.2 — The Analyst": seance-2/ex-2-2-the-analyst.md
       - "2.3 — Garbage In": seance-2/ex-2-3-garbage-in.md
       - "2.4 — The AI Agent": seance-2/ex-2-4-the-agent.md
-  # Séance 3, 4: deliberately not in this repo yet — revealed progressively.
+  - "Séance 3 — Your Project":
+      - "Project Brief": seance-3/project-brief.md
+  - "Séance 4 — Defense":
+      - "Defense Day": seance-4/defense-day.md
   # Full content backed up at ../docs-staging/ (outside this public repo). See
   # ../PREP-CHECKLIST.md "Progressive reveal" for how to bring each one back.
