@@ -1,10 +1,11 @@
 # Defense Day 🎤
 
-**This is the exam.** You present **alone**, your own project. Everyone in the room watches.
+**This is the exam.** You present **alone**, your own project, to the instructor. You come
+for **your slot only** — you do not sit through the whole afternoon.
 
 **Format**: 7 minutes of presentation + 3 minutes of questions, in a 10-minute slot.
-**Hard cutoff at 7:00** — a timer is projected, and it applies to everyone, because being
-kind to the first five students means the last one presents to an empty room.
+**Hard cutoff at 7:00** — a timer is projected, and it applies to everyone. Every minute
+you overrun is a minute the students after you wait in the corridor.
 
 The two things graded are the two from the module brief: **you explain how it works**, and
 **you justify why it is relevant**.
@@ -52,8 +53,11 @@ plugged in **before** the student ahead of you finishes — not when your name i
 Last slot ends at **17:40**. The slots run on clean ten-minute marks, so if we slip, you
 can always work out your real time from the clock.
 
-!!! danger "If you are in slot 1 or 2"
-    Be in the room and set up by **13:55**. We start on time, with no opening talk.
+!!! danger "Arrive 10 minutes before your slot"
+    Be outside the room, laptop **open, charged and already logged in**, 10 minutes
+    before your time. You plug in and start — there is no setup time inside your slot.
+
+    Slots 1 and 2: be there by **13:55**. We start on time, with no opening talk.
 
 ---
 
@@ -64,7 +68,7 @@ Read this once before you walk up. **Do not start with slides — start with it 
 | Clock | What you are doing |
 |---|---|
 | **0:00** | The problem, in one sentence, with **one real number**. Human words. Do not describe the solution yet. |
-| **1:00** | ▶️ **You click. It runs. Live.** Real data, real output arriving in front of us. |
+| **1:00** | ▶️ **You click. It runs. Live.** Real data, real output arriving in front of me. |
 | **3:00** | Walk the canvas, **one sentence per node** — then stop on the **agent**: its mission, its tools, and the moment in the **logs** where it decided to call one. |
 | **5:00** | **Break it on purpose.** Trigger your failure case. Show it fails cleanly instead of crashing. |
 | **6:30** | Your **three limits**, and the one thing you would build next. |
@@ -106,7 +110,7 @@ Check every box **the evening before**, not in the room.
 | # | Beat | Time | What you say |
 |---|---|---|---|
 | 1 | **The problem** | 1:00 | What was annoying, how often, how long it took. One concrete number. Do not describe the solution yet. |
-| 2 | **Live demo** | 2:00 | Trigger it in front of us. Real data. We watch the execution and the real output arrive. |
+| 2 | **Live demo** | 2:00 | Trigger it in front of me. Real data. We watch the execution and the real output arrive. |
 | 3 | **How it works** | 2:00 | Walk the canvas. One sentence per step. Then stop on the **agent**: its mission, its tools, and show in the logs where it decided to call one. |
 | 4 | **Break it on purpose** | 1:30 | Trigger your failure case live. Show that it does not crash, or that it fails cleanly. This is the beat that separates a demo from a product. |
 | 5 | **Limits and next step** | 0:30 | What you would not trust it with yet, and the one thing you would build next. |
@@ -136,7 +140,7 @@ about exactly that node).
 | **The agent is real and justified** | 20% | An AI Agent node with a tool, visible in the logs, and a sentence on why a fixed chain was not enough. |
 | **Relevance of the use case** | 15% | A real problem with a real cost. Not a demo looking for a problem. |
 | **Robustness** | 10% | The failure case is handled on purpose and shown live. Re-runnable without duplicates. |
-| **Clarity** | 5% | 7 minutes respected. Named nodes. The room follows. |
+| **Clarity** | 5% | 7 minutes respected. Named nodes. I can follow without asking you to back up. |
 
 !!! info "What is NOT graded"
     Slide design. Number of nodes. How sophisticated the AI part is. A simple workflow that
@@ -194,14 +198,7 @@ Breathe. It happens every year. Neither option below is a failure.
    apologise for two minutes.
 
 What loses points is pretending nothing happened, or going silent. You built this. You know
-it better than anyone in the room.
-
----
-
-## When it is not your turn
-
-You are the audience. You will see ~20 different solutions to 20 different problems in one
-afternoon — some better than yours. **Take notes.** That is the best part of the day.
+it better than I do.
 
 ---
 
