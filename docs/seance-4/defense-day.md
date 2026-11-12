@@ -24,24 +24,57 @@ The two things graded are the two from the module brief: **you explain how it wo
 **Defense day runs 14:00 → 18:00.** Find your slot now. Your laptop must be set up and
 plugged in **before** the student ahead of you finishes — not when your name is called.
 
-| # | Student | Time | | # | Student | Time |
-|---|---|---|---|---|---|---|
-| 1 | Leo 吴思远 | **14:00** | | 13 | Kevin Chou 周毅 | 16:01 |
-| 2 | Leah 雷晴 | 14:09 | | 14 | Luke 刘从文 | 16:10 |
-| 3 | Liu Yunfei 柳云飞 | 14:18 | | 15 | Noah 吕松原 | 16:19 |
-| 4 | Alan 喻思翔 | 14:27 | | | ☕ *Break* | **16:28** |
-| 5 | Hongrui Bian 边红瑞 | 14:36 | | 16 | Jocker 宋豪杰 | 16:40 |
-| 6 | Enzo 陈禹琛 | 14:45 | | 17 | Rayne Gao 高海天 | 16:49 |
-| 7 | Michael Yu 余子谦 | 14:54 | | 18 | Viclant 吴彦澜 | 16:58 |
-| 8 | Gaston 张方煜辰 | 15:03 | | 19 | Terry 虞盎然 | 17:07 |
-| | ☕ *Break* | **15:12** | | 20 | Harrison 叶与陈 | 17:16 |
-| 9 | Jacinda 张馨月 | 15:25 | | 21 | Theodore 郑宇翔 | 17:25 |
-| 10 | Jim 许哲铭 | 15:34 | | 22 | Danny 陈子明 | 17:34 |
-| 11 | Kane 许杰翔 | 15:43 | | | | |
-| 12 | Katie 郭可馨 | 15:52 | | | | |
+| # | Student | Time |
+|---|---|---|
+| 1 | Leo 吴思远 | **14:00** |
+| 2 | Leah 雷晴 | 14:09 |
+| 3 | Liu Yunfei 柳云飞 | 14:18 |
+| 4 | Alan 喻思翔 | 14:27 |
+| 5 | Hongrui Bian 边红瑞 | 14:36 |
+| 6 | Enzo 陈禹琛 | 14:45 |
+| 7 | Michael Yu 余子谦 | 14:54 |
+| 8 | Gaston 张方煜辰 | 15:03 |
+| 9 | Jacinda 张馨月 | 15:12 |
+| 10 | Jim 许哲铭 | 15:21 |
+| 11 | Kane 许杰翔 | 15:30 |
+| 12 | Katie 郭可馨 | 15:39 |
+| 13 | Kevin Chou 周毅 | 15:48 |
+| 14 | Luke 刘从文 | 15:57 |
+| 15 | Noah 吕松原 | 16:06 |
+| 16 | Jocker 宋豪杰 | 16:15 |
+| 17 | Rayne Gao 高海天 | 16:24 |
+| 18 | Viclant 吴彦澜 | 16:33 |
+| 19 | Terry 虞盎然 | 16:42 |
+| 20 | Harrison 叶与陈 | 16:51 |
+| 21 | Theodore 郑宇翔 | 17:00 |
+| 22 | Danny 陈子明 | 17:09 |
 
 !!! danger "If you are in slot 1 or 2"
     Be in the room and set up by **13:55**. We start on time, with no opening talk.
+
+---
+
+## Your 6 minutes, at a glance
+
+Read this once before you walk up. **Do not start with slides — start with it running.**
+
+| Clock | What you are doing |
+|---|---|
+| **0:00** | The problem, in one sentence, with **one real number**. Human words. Do not describe the solution yet. |
+| **0:45** | ▶️ **You click. It runs. Live.** Real data, real output arriving in front of us. |
+| **2:15** | Walk the canvas, **one sentence per node** — then stop on the **agent**: its mission, its tools, and the moment in the **logs** where it decided to call one. |
+| **4:15** | **Break it on purpose.** Trigger your failure case. Show it fails cleanly instead of crashing. |
+| **5:30** | Your **three limits**, and the one thing you would build next. |
+| **6:00** | Stop. Then 2.5 minutes of questions. |
+
+**The three things that lose points fastest:**
+
+1. Starting with context instead of a demo — if you run out of time, nobody ever sees it work.
+2. Reading every parameter of every node. One sentence per node, pointing at the screen.
+3. Saying *"and then some stuff handles the data"* — that is where the question will land.
+
+**If it breaks**: debug out loud for 30 seconds, or play your 60-second screencast and keep
+narrating. Both are fine. Panic and silence are not. Full detail in the sections below.
 
 ---
 
