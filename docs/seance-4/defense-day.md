@@ -2,9 +2,9 @@
 
 **This is the exam.** You present **alone**, your own project. Everyone in the room watches.
 
-**Format**: 8 minutes of presentation + 4 minutes of questions. **Hard cutoff at 8:00** — a
-timer is projected, and it applies to everyone, because being kind to the first five
-students means the last one presents to an empty room.
+**Format**: 6 minutes of presentation + 2.5 minutes of questions, in a 9-minute slot.
+**Hard cutoff at 6:00** — a timer is projected, and it applies to everyone, because being
+kind to the first five students means the last one presents to an empty room.
 
 The two things graded are the two from the module brief: **you explain how it works**, and
 **you justify why it is relevant**.
@@ -17,12 +17,40 @@ The two things graded are the two from the module brief: **you explain how it wo
 
 ---
 
+---
+
+## The running order
+
+**Defense day runs 14:00 → 18:00.** Find your slot now. Your laptop must be set up and
+plugged in **before** the student ahead of you finishes — not when your name is called.
+
+| # | Student | Time | | # | Student | Time |
+|---|---|---|---|---|---|---|
+| 1 | Leo 吴思远 | **14:00** | | 13 | Kevin Chou 周毅 | 16:01 |
+| 2 | Leah 雷晴 | 14:09 | | 14 | Luke 刘从文 | 16:10 |
+| 3 | Liu Yunfei 柳云飞 | 14:18 | | 15 | Noah 吕松原 | 16:19 |
+| 4 | Alan 喻思翔 | 14:27 | | | ☕ *Break* | **16:28** |
+| 5 | Hongrui Bian 边红瑞 | 14:36 | | 16 | Jocker 宋豪杰 | 16:40 |
+| 6 | Enzo 陈禹琛 | 14:45 | | 17 | Rayne Gao 高海天 | 16:49 |
+| 7 | Michael Yu 余子谦 | 14:54 | | 18 | Viclant 吴彦澜 | 16:58 |
+| 8 | Gaston 张方煜辰 | 15:03 | | 19 | Terry 虞盎然 | 17:07 |
+| | ☕ *Break* | **15:12** | | 20 | Harrison 叶与陈 | 17:16 |
+| 9 | Jacinda 张馨月 | 15:25 | | 21 | Theodore 郑宇翔 | 17:25 |
+| 10 | Jim 许哲铭 | 15:34 | | 22 | Danny 陈子明 | 17:34 |
+| 11 | Kane 许杰翔 | 15:43 | | | | |
+| 12 | Katie 郭可馨 | 15:52 | | | | |
+
+!!! danger "If you are in slot 1 or 2"
+    Be in the room and set up by **13:55**. We start on time, with no opening talk.
+
+---
+
 ## What to come with
 
 Check every box **the evening before**, not in the room.
 
 - ☐ **Your own laptop, charged**, projector tested before your slot.
-- ☐ **n8n open, your workflow open**, logged in. Don't spend your 8 minutes finding a
+- ☐ **n8n open, your workflow open**, logged in. Don't spend your 6 minutes finding a
   password.
 - ☐ Your **60-second screencast** of a successful run — **on the machine, not in the
   cloud**. Assume the WiFi fails.
@@ -41,11 +69,11 @@ Check every box **the evening before**, not in the room.
 
 | # | Beat | Time | What you say |
 |---|---|---|---|
-| 1 | **The problem** | 1 min | What was annoying, how often, how long it took. One concrete number. Do not describe the solution yet. |
-| 2 | **Live demo** | 2 min | Trigger it in front of us. Real data. We watch the execution and the real output arrive. |
-| 3 | **How it works** | 2.5 min | Walk the canvas. One sentence per step. Then stop on the **agent**: its mission, its tools, and show in the logs where it decided to call one. |
-| 4 | **Break it on purpose** | 1.5 min | Trigger your failure case live. Show that it does not crash, or that it fails cleanly. This is the beat that separates a demo from a product. |
-| 5 | **Limits and next step** | 1 min | What you would not trust it with yet, and the one thing you would build next. |
+| 1 | **The problem** | 0:45 | What was annoying, how often, how long it took. One concrete number. Do not describe the solution yet. |
+| 2 | **Live demo** | 1:30 | Trigger it in front of us. Real data. We watch the execution and the real output arrive. |
+| 3 | **How it works** | 2:00 | Walk the canvas. One sentence per step. Then stop on the **agent**: its mission, its tools, and show in the logs where it decided to call one. |
+| 4 | **Break it on purpose** | 1:15 | Trigger your failure case live. Show that it does not crash, or that it fails cleanly. This is the beat that separates a demo from a product. |
+| 5 | **Limits and next step** | 0:30 | What you would not trust it with yet, and the one thing you would build next. |
 
 !!! tip "Rehearse beat 2 and beat 4 with a timer"
     Those are the two that can go wrong on stage. The other three you can talk through from
@@ -72,7 +100,7 @@ about exactly that node).
 | **The agent is real and justified** | 20% | An AI Agent node with a tool, visible in the logs, and a sentence on why a fixed chain was not enough. |
 | **Relevance of the use case** | 15% | A real problem with a real cost. Not a demo looking for a problem. |
 | **Robustness** | 10% | The failure case is handled on purpose and shown live. Re-runnable without duplicates. |
-| **Clarity** | 5% | 8 minutes respected. Named nodes. The room follows. |
+| **Clarity** | 5% | 6 minutes respected. Named nodes. The room follows. |
 
 !!! info "What is NOT graded"
     Slide design. Number of nodes. How sophisticated the AI part is. A simple workflow that
